@@ -96,11 +96,11 @@ header ul li {
     background-size: cover;
     background-position: center;
     -webkit-mask-image: linear-gradient(#131514, transparent);
-    mask-image: -webkit-radial-gradient(b#131514);
+    mask-image: -webkit-radial-gradient(#131514);
 }
 
 .logo {
-    max-width: 50%;
+    max-width: 40%;
 
 }
 
