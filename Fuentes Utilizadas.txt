@@ -1,0 +1,20 @@
+FUENTES
+---------------------
+
+Roboto (basic font)
+Brigends Expanded (alternative font)
+---------------------
+
+ICONOS
+-----------------------
+https://fontawesome.com/
+
+Colores
+------
+
+
+Rojo base: #8d2b29
+rojo oscuro: #6e2a28
+osucro: #382826
+negro: #242625
+alternative:#1b2b26
