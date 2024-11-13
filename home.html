@@ -6,31 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Cero</title>
     <link rel="stylesheet" href="./style-home.css">
+    <link rel="icon" href="/Imagenes/logoico.ico">
     <script src="https://kit.fontawesome.com/1ad357c317.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <body>
     
     <header>
-        <nav class="navegation container">
-            <picture class="logo">
-                <img src="./Imagenes/logo-nombre.png" alt="logo">
-            </picture>
-
-            <ul class="navbar_menu">
-                <li><a class="navbar_link" href="/home.html">HOME</a></li>
-                <li><a class="navbar_link" href="#shop">SHOP</a></li>
-                <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
-                <li><a class="navbar_link" href="/login.html">LOGIN</a></li>
-            </ul>
+        <header>
+            <nav class="nav container">
+                <picture>
+                    <img class="logo" src="./Imagenes/logo-nombre.png" alt="logo">
+                </picture>
+                <input type="checkbox" id="check">
+                <label for="check" class="icons">
+                    <i class='bx bx-menu' id="menu-icon"></i>
+                    <i class='bx bx-x' id="close-icon"></i>
+                </label>
+    
+                <ul class="navbar_menu">
+                    <li><a class="navbar_link" href="/home.html">HOME</a></li>
+                    <li><a class="navbar_link" href="#shop">SHOP</a></li>
+                    <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
+                    <li><a class="navbar_link" href="/login.html">LOGIN</a></li>
+                </ul>
+    
+            </nav>
+        </header>
 
         </nav>
     </header>
+    
     <main>
         <picture>
             <img class="banner" src="/Imagenes/banner.gif" alt="">
         </picture>
-        <h3 id="shop" class="merch">SHOP</h3>
-        <section class="card-container">
+        <h3 id="shop" class="merch ">SHOP</h3>
+        <section class="card-container ">
+            <div class="card">
+                <div class="face front">
+                    <img src="./Imagenes/Remeras/crown1.jpg" alt="">
+                    <h3>CROWN THE EMPIRE</h3>
+                </div>
+            </div>
+            
+            
+            <div class="card">
+                <div class="face front">
+                    <img src="./Imagenes/Remeras/beartooth.jpg" alt="">
+                    <h3>BEARTOOTH</h3>
+                </div>
+            </div>
             <div class="card">
                 <div class="face front">
                     <img src="./Imagenes/Remeras/memphis.jpg" alt="">
@@ -39,30 +65,18 @@
             </div>
             <div class="card">
                 <div class="face front">
-                    <img src="./Imagenes/Remeras/crown1.jpg" alt="">
-                    <h3>CROWN THE EMPIRE</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="face front">
                     <img src="./Imagenes/Remeras/badomens1.jpg" alt="">
                     <h3>BAD OMENS</h3>
                 </div>
             </div>
             <div class="card">
                 <div class="face front">
-                    <img src="./Imagenes/Remeras/badomens1.jpg" alt="">
-                    <h3>BAD OMENS</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/badomens1.jpg" alt="">
-                    <h3>BAD OMENS</h3>
+                    <img src="./Imagenes/Remeras/ofmiceandmen.jpg" alt="">
+                    <h3>OF MICE AND MEN</h3>
                 </div>
             </div>
         </section>
-        <h3 id="#reproduce" class="text-music">MUSIC</h3>
+        <h3  class="text-music" id="reproduce">MUSIC</h3>
         <section class="music">
             <iframe width="100%" height="800px" src="https://www.youtube.com/embed/uxrTIlh7QKY?si=HYslRX2Zvai2ew63"
                 title="YouTube video player" frameborder="0"
