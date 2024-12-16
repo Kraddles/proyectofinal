@@ -43,11 +43,12 @@ header {
     display: flex;
     color: white;
     width: 100%;
-    height: 111px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 100;
+
 }
 
 header::before {
@@ -137,7 +138,7 @@ header>nav>ul>li:hover>ul {
     right: 5%;
     -webkit-mask-image: linear-gradient(#2a2c2b, transparent);
     mask-image: -webkit-radial-gradient(#2e3130);
-    
+
 }
 
 
@@ -145,14 +146,16 @@ header>nav>ul>li:hover>ul {
 .icon {
     position: absolute;
     padding: 8px 0;
-    
+
 }
 
 .logo {
-    
+
     background-size: contain;
-    max-width: 600px; /* Fixed width as per the design */
-    height: 100%; /* Full height of the header */
+    max-width: 600px;
+    /* Fixed width as per the design */
+    height: 100%;
+    /* Full height of the header */
     -webkit-mask-image: linear-gradient(#2a2c2b, transparent);
     mask-image: -webkit-radial-gradient(#2e3130);
 }
@@ -167,25 +170,226 @@ header>nav>ul>li:hover>ul {
 }
 
 
+/*************CARRITO DE COMPRAS***************/
+.icon-cart {
+    
+    width: 40px; 
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+
+.container-carrito {
+    position: relative;
+}
+
+.count-product {
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: white;
+
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#contador-productos {
+    font-size: 12px;
+}
+
+
+
+.container-cart-products {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    color: black;
+    background-color: #fff;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+
+
+
+.cart-product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    
+}
+
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+font-size: 20px;
+}
+
+.precio-producto-carrito {
+font-weight: 700;
+font-size: 20px ;
+margin-left:10px;
+}
+
+.cantidad-producto-carrito {
+font-weight: 400;
+font-size: 20px;
+}
+
+.close-icon-cart {
+    width: 25px;
+    height: 25px;
+}
+
+.close-icon-cart:hover {
+    color: red;
+    cursor: pointer;
+
+}
+
+
+.cart-total {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+.hidden-cart {
+    display: none;
+}
+
+
+
+
+
+
+
 /******************/
 
-.banner {
-    width: 100%;
-    max-width: 100%;
+.logobanner {
+    max-width: 300px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
+
+
+
+}
+
+
+.banner {
+    background-image: linear-gradient(50deg, #000000, #00000020), url(./Imagenes/banner.gif);
     background-size: cover;
     background-position: center;
-    -webkit-mask-image: linear-gradient(#131514, transparent);
-    mask-image: -webkit-radial-gradient(#131514);
+    width: 100%;
+    height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-mask-image: linear-gradient(rgb(0 0 0/ 1),
+            rgb(0 0 0/ 0.5) 90%,
+            rgb(0 0 0/ 0));
+    mask-image: linear-gradient(rgb(0 0 0/ 1),
+            rgb(0 0 0/ 0.5)90%,
+            rgb(0 0 0/ 0));
+
+
 }
+
+.slide_one {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+}
+
+.image-date {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    text-align: center;
+}
+
+.image-date>h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.image-date>p {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.button {
+    border: none;
+    padding: 10px 10px;
+    margin-top: 15px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #8a0301;
+    ;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: var(--font-xsmall);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s linear;
+
+}
+
+.button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1, 1.1);
+}
+
+
 /**********************MERCH**********************/
+
+
 
 .merch {
     color: white;
     font-weight: 900;
     font-size: 50px;
     text-align: center;
-    padding: 30px 0 ;
+    padding: 30px 0;
     background-image: linear-gradient(rgb(255, 255, 255), #131514);
     background-clip: text;
     color: transparent;
@@ -195,16 +399,30 @@ header>nav>ul>li:hover>ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 30px 0 30px 0;
-    gap: 20px;
+    padding: 20px 20px;
+    gap: 40px;
     flex-wrap: wrap;
+
+
 }
 
 .card {
     position: relative;
-    width: 300px;
+    width: 350px;
     height: 450px;
     transition: .5s;
+    /*-webkit-mask-image: linear-gradient(
+        rgb(0 0 0/ 1),
+        rgb(0 0 0/ 0.5) 90%,
+        rgb(0 0 0/ 0)
+        );
+    mask-image: linear-gradient(
+        rgb(0 0 0/ 1),
+        rgb(0 0 0/ 0.5)90%,
+        rgb(0 0 0/ 0)
+    
+    );
+*/
 }
 
 .card:hover {
@@ -219,7 +437,9 @@ header>nav>ul>li:hover>ul {
     backface-visibility: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: .5s;
+    float: left;
+
+
 }
 
 
@@ -228,31 +448,82 @@ header>nav>ul>li:hover>ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: -webkit-radial-gradient(black);
+    left: 0;
+    transition: opacity 0.3s ease-in-out;
 }
+
+.abajo {
+    opacity: 1;
+}
+
+.arriba:hover {
+    opacity: 0;
+}
+
+.card-content {
+    position: absolute;
+    background-color: rgb(0 0 0/50%);
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    height: 35%;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 
 .card h3 {
     font-family: 'VEEPS';
     font-weight: bold;
-    position: absolute;
     width: 100%;
     bottom: 0;
     text-align: center;
     padding-bottom: 20px;
     font-size: 60px;
     color: white;
+    text-transform: capitalize;
+}
+
+.card-content p {
+    font-weight: 600;
+}
+
+
+.button-add {
+    border: none;
+    background: none;
+    background-color: #8a0301;
+    color: white;
+    font-weight: 600;
+    padding: 15px 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button-add:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: #520301;
+    transform: scale(1.1, 1.1);
+}
+
+.card-content:hover {
+    height: 80%;
+    transition: 0.7s;
 }
 
 
 /**********************MUSIC**********************/
 .music {
     text-align: center;
-    
+
 }
 
 .text-music {
-    padding: 30px 0 ;
+    padding: 30px 0;
     font-weight: 900;
     font-size: 50px;
     text-align: center;
@@ -264,6 +535,39 @@ header>nav>ul>li:hover>ul {
 .music iframe {
     padding: 30px 0 30px 0;
 }
+
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact h3 {
+    padding: 30px 0;
+    font-weight: 900;
+    font-size: 50px;
+    text-align: center;
+    background-image: linear-gradient(rgb(255, 255, 255), #131514);
+    background-clip: text;
+    color: transparent;
+}
+
+.contact p {
+    padding: 30px 0;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    background-image: linear-gradient(#222222, #520301);
+    background-clip: text;
+    color: transparent;
+}
+
+
+
 
 
 
@@ -347,7 +651,7 @@ footer {
         width: 100%;
         overflow: hidden;
         background-color: #141414;
-        opacity: 0.8;
+        opacity: 0.9;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -373,20 +677,20 @@ footer {
         gap: 40px;
     }
 
-    .card {
-        width: 400px;
-        height: 450px;
-    }
 
     .logo {
         width: 300px;
 
     }
 
-    .merch,.text-music {
+    .merch,
+    .text-music {
         font-size: 40px;
-        padding: 10px 0 ;
+        padding: 10px 0;
     }
 
+    .banner {
+        height: 800px;
+    }
 
 }

@@ -7,11 +7,11 @@
     <title>Proyecto Cero</title>
     <link rel="stylesheet" href="./style-home.css">
     <link rel="icon" href="/Imagenes/logoico.ico">
-    <script src="https://kit.fontawesome.com/1ad357c317.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/lightbox.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 <body>
-    
+
     <header>
         <header>
             <nav class="nav container">
@@ -23,60 +23,168 @@
                     <i class='bx bx-menu' id="menu-icon"></i>
                     <i class='bx bx-x' id="close-icon"></i>
                 </label>
-    
+
                 <ul class="navbar_menu">
                     <li><a class="navbar_link" href="/index.html">HOME</a></li>
                     <li><a class="navbar_link" href="#shop">SHOP</a></li>
                     <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
-                    <li><a class="navbar_link" href="/login.html">LOGIN</a></li>
+                    <li><a class="navbar_link" href="#contacto">CONTACT</a></li>
                 </ul>
-    
+
+                <div class="container-carrito">
+                    <i class="fa-solid fa-cart-shopping icon-cart"></i>
+                    
+                    <div class="count-product">
+                        <span id="contador-productos">0</span>
+                    </div>
+                    <div class="container-cart-products hidden-cart">
+                        <div class="cart-product">
+                            <div class="info-cart-product">
+                                <span class="cantidad-producto-carrito">1</span>
+
+                                <p class="titulo-producto-carrito">Zapatos Nike</p>
+                                <span class="precio-producto-carrito">$80</span>
+                            </div>
+                            <i class="close-icon-cart fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="cart-total">
+                            <h3>Total</h3>
+                            <span class="total-pagar">$200</span>
+                        </div>
+                    </div>
+                </div>
+
             </nav>
         </header>
 
         </nav>
     </header>
-    
+
     <main>
-        <picture>
-            <img class="banner" src="/Imagenes/banner.gif" alt="">
-        </picture>
+
+        <div class="banner">
+            <div class="slide_one image-date">
+                <img class="logobanner" src="./Imagenes/logo-final.png" alt="">
+                <p>PARA MAS INFORMACIÓN</p>
+                <h3>CONTÁCTATE CON NOSOTROS</h3>
+                <a class="button" href="#" alt="">CONTACTANOS</a>
+            </div>
+        </div>
+
+        </div>
+
         <h3 id="shop" class="merch ">SHOP</h3>
         <section class="card-container ">
             <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/crown1.jpg" alt="">
+                <a href="./Imagenes/Remeras/crown2.jpg" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/crown2.jpg" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/crown1.jpg" alt="Foto">
+                    </div>
+                </a>
+                <div class="card-content">
                     <h3>CROWN THE EMPIRE</h3>
+                    <p>Remera Oversize <br>Crown The Empire</p>
+                    <p>$25.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
                 </div>
             </div>
-            
-            
+
+
             <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/beartooth.jpg" alt="">
+                <a href="./Imagenes/Remeras/beartooth2.jpg" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/beartooth2.jpg" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/beartooth.jpg" alt="Foto">
+                    </div>
+                </a>
+                <div class="card-content">
                     <h3>BEARTOOTH</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Remera Oversize <br>BEARTOOTH</p>
+
+                    <p>$35.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/memphis.jpg" alt="">
+                <a href="./Imagenes/Remeras/memphis2.webp" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/memphis2.webp" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/memphis.jpg" alt="Foto">
+                    </div>
+                </a>
+                <div class="card-content">
                     <h3>MEMPHIS MAY FIRE</h3>
+                    <p>Remera Oversize <br>Memphis May Fire</p>
+                    <p>$25.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/badomens1.jpg" alt="">
+                <a href="./Imagenes/Remeras/badomens2.jpg" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/badomens2.jpg" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/badomens1.jpg" alt="Foto">
+                        <h3>BAD OMENS</h3>
+                    </div>
+                </a>
+                <div class="card-content">
                     <h3>BAD OMENS</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Remera Oversize <br>Crown The Empire</p>
+                    <p>$25.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
-                <div class="face front">
-                    <img src="./Imagenes/Remeras/ofmiceandmen.jpg" alt="">
+                <a href="./Imagenes/Remeras/ofmiceandmen2.jpg" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/ofmiceandmen2.jpg" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/ofmiceandmen.jpg" alt="Foto">
+                    </div>
+                </a>
+                <div class="card-content">
                     <h3>OF MICE AND MEN</h3>
+                    <p>Remera Oversize <br>Of Mice And Men</p>
+                    <p>$25.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
                 </div>
+            </div>
+            <div class="card">
+                <a href="./Imagenes/Remeras/bringmethehorizon2.jpg" data-lightbox="models" data-title="Remera">
+                    <!--Full screen imagen de cards-->
+
+                    <div class="face front">
+                        <img class="abajo" src="./Imagenes/Remeras/bringmethehorizon2.jpg" alt="Remera">
+                        <img class="arriba" src="/Imagenes/Remeras/bringmethehorizon.jpg" alt="Foto">
+                    </div>
+                </a>
+                <div class="card-content">
+                    <h3>BRING ME THE HORIZON</h3>
+                    <p>Remera Oversize <br>Bring Me The Horizon</p>
+                    <p>$30.000</p>
+                    <button class="button-add">AÑADIR AL CARRITO</button>
+                </div>
+            </div>
             </div>
         </section>
-        <h3  class="text-music" id="reproduce">MUSIC</h3>
+        <h3 class="text-music" id="reproduce">MUSIC</h3>
         <section class="music">
             <iframe width="100%" height="800px" src="https://www.youtube.com/embed/uxrTIlh7QKY?si=HYslRX2Zvai2ew63"
                 title="YouTube video player" frameborder="0"
@@ -88,6 +196,22 @@
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </section>
+        <section id="contacto" class="contact">
+            <h3>CONTACTO</h3>
+            <p>CONTÁCTATE CON NOSOTROS </h3>
+            <form action="">
+                <div class="input-box"> <input type="text" required placeholder="Nombre y Apellido"></div>
+                <div class="input-box"> <input type="email" required placeholder="Correo electrónico"></div>
+                <div class="input-box"> <input type="text" required placeholder="Asunto"></div>
+                <div class="input-box"> <input type="text" required placeholder="Escribe tu mensaje"></div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+
+        </section>
+
+
+
+
     </main>
     <footer>
         <section class="social-icons">
@@ -113,6 +237,9 @@
             <p>Copyright ©2024, Designed by Ariel Ortiz.</p>
         </div>
     </footer>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1ad357c317.js" crossorigin="anonymous"></script>
+    <script src="/lightbox-plus-jquery.js"></script> <!--Full screen imagen de cards-->
 </body>
 
 </html>

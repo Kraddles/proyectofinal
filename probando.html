@@ -1,0 +1,45 @@
+<html>
+ <head>
+  <title>Cambiar imagen con hover</title>
+ </head>
+<body>
+ <div class="imagen">
+    <!--imagen1-->
+    <img src="/Imagenes/Remeras/badomens1.jpg" />
+    <!--imagen2-->
+    <img class="arriba" src="/Imagenes/Remeras/badomens2.jpg" />
+ </div>
+
+<style>
+ body{
+  background: white;
+ }
+
+ .imagen {
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: 50px 20px;
+  backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+  float: left;
+ }
+  /*aquí te agregue el efecto de transición en 0.3segundos*/
+ .imagen img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+  transition: opacity 0.3s ease-in-out;
+ }
+ /*y con hover detectamos si el puntero de mouse esta por encima*/
+ .imagen img.arriba:hover {
+  opacity: 0;
+ }
+</style>
+
+</body>
+</html>
