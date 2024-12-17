@@ -73,12 +73,20 @@ header ul li {
     flex-grow: 1;
 }
 
+.organizar {
+    display: flex;
+    align-items: center;
+
+
+}
+
 
 .navbar_menu {
     display: flex;
     align-items: center;
     list-style: none;
     gap: 30px;
+    order: 0;
 }
 
 .navbar_menu>li>a {
@@ -130,7 +138,7 @@ header>nav>ul>li:hover>ul {
 }
 
 .icons {
-    position: absolute;
+    position: relative;
     font-size: 2.8rem;
     color: white;
     cursor: pointer;
@@ -138,7 +146,6 @@ header>nav>ul>li:hover>ul {
     right: 5%;
     -webkit-mask-image: linear-gradient(#2a2c2b, transparent);
     mask-image: -webkit-radial-gradient(#2e3130);
-
 }
 
 
@@ -150,7 +157,7 @@ header>nav>ul>li:hover>ul {
 }
 
 .logo {
-
+    position: relative;
     background-size: contain;
     max-width: 600px;
     /* Fixed width as per the design */
@@ -171,19 +178,30 @@ header>nav>ul>li:hover>ul {
 
 
 /*************CARRITO DE COMPRAS***************/
-.icon-cart {
-    
-    width: 40px; 
-}
-
-.icon-cart:hover{
-    cursor: pointer;
-}
-
-
 .container-carrito {
     position: relative;
+    transition: .6s ease;
+    order: 0;
 }
+
+.icon-cart {
+    width: 40px;
+    position: relative;
+    padding-left: 20px
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+
+}
+
+
+
+
+.container-carrito:hover {
+    transition: .6s ease;
+}
+
 
 .count-product {
     position: absolute;
@@ -191,20 +209,19 @@ header>nav>ul>li:hover>ul {
     right: 0;
     background-color: #000;
     color: white;
-
     width: 25px;
     height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+
 }
 
 #contador-productos {
     font-size: 12px;
+
 }
-
-
 
 .container-cart-products {
     position: absolute;
@@ -216,9 +233,8 @@ header>nav>ul>li:hover>ul {
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+
 }
-
-
 
 
 .cart-product {
@@ -227,7 +243,7 @@ header>nav>ul>li:hover>ul {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
-    
+
 }
 
 .info-cart-product {
@@ -237,18 +253,18 @@ header>nav>ul>li:hover>ul {
 }
 
 .titulo-producto-carrito {
-font-size: 20px;
+    font-size: 20px;
 }
 
 .precio-producto-carrito {
-font-weight: 700;
-font-size: 20px ;
-margin-left:10px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
 }
 
 .cantidad-producto-carrito {
-font-weight: 400;
-font-size: 20px;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .close-icon-cart {
@@ -628,7 +644,8 @@ footer {
 
     .icons {
         display: inline-flex;
-
+        order: 1;
+        padding-left: 20px;
     }
 
     #check:checked~.icons #menu-icon {
@@ -656,6 +673,7 @@ footer {
         justify-content: center;
         align-items: center;
         transition: .3s ease;
+        
     }
 
     #check:checked~.navbar_menu {
@@ -666,8 +684,9 @@ footer {
         display: none;
     }
 
-
 }
+
+
 
 
 
