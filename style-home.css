@@ -46,8 +46,13 @@ header {
     height: 100px;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
+    background-color: rgba(20, 20, 20, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 
 }
 
@@ -178,37 +183,32 @@ header>nav>ul>li:hover>ul {
 
 
 /*************CARRITO DE COMPRAS***************/
-.container-carrito {
-    position: relative;
-    transition: .6s ease;
-    order: 0;
+.icon-cart {
+
+    -webkit-mask-image: linear-gradient(#2a2c2b, transparent);
+    mask-image: -webkit-radial-gradient(#2e3130);
+    transition: 0.3s;
 }
 
-.icon-cart {
-    width: 40px;
-    position: relative;
-    padding-left: 20px
-}
 
 .icon-cart:hover {
     cursor: pointer;
+    color: #8a0301;
+}
+
+.container-icon {
+    position: relative;
+    margin: 0 30px;
 
 }
 
-
-
-
-.container-carrito:hover {
-    transition: .6s ease;
-}
-
-
-.count-product {
+.count-products {
     position: absolute;
     top: 55%;
     right: 0;
-    background-color: #000;
-    color: white;
+    left: 100%;
+    background-color: #8a0301;
+    color: #fff;
     width: 25px;
     height: 25px;
     display: flex;
@@ -216,19 +216,20 @@ header>nav>ul>li:hover>ul {
     align-items: center;
     border-radius: 50%;
 
+
 }
 
 #contador-productos {
     font-size: 12px;
-
 }
 
 .container-cart-products {
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 0;
-    color: black;
-    background-color: #fff;
+    color: white;
+    background-color: #351818;
+    opacity: 0.9;
     width: 400px;
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
@@ -236,12 +237,12 @@ header>nav>ul>li:hover>ul {
 
 }
 
-
 .cart-product {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 10px 20px;
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
 
 }
@@ -249,6 +250,8 @@ header>nav>ul>li:hover>ul {
 .info-cart-product {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 20px;
     flex: 0.8;
 }
 
@@ -267,22 +270,21 @@ header>nav>ul>li:hover>ul {
     font-size: 20px;
 }
 
-.close-icon-cart {
+.icon-close {
     width: 25px;
     height: 25px;
 }
 
-.close-icon-cart:hover {
-    color: red;
+.icon-close:hover {
+    stroke: red;
     cursor: pointer;
-
 }
-
 
 .cart-total {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    padding: 20px 0;
     gap: 20px;
 }
 
@@ -296,31 +298,19 @@ header>nav>ul>li:hover>ul {
     font-weight: 900;
 }
 
-
+.total-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
 
 .hidden-cart {
     display: none;
 }
 
 
-
-
-
-
-
-/******************/
-
-.logobanner {
-    max-width: 300px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
-
-
-
-}
+/*********Banner*********/
 
 
 .banner {
@@ -328,58 +318,83 @@ header>nav>ul>li:hover>ul {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    -webkit-mask-image: linear-gradient(rgb(0 0 0/ 1),
-            rgb(0 0 0/ 0.5) 90%,
-            rgb(0 0 0/ 0));
-    mask-image: linear-gradient(rgb(0 0 0/ 1),
-            rgb(0 0 0/ 0.5)90%,
-            rgb(0 0 0/ 0));
-
-
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    -webkit-mask-image: linear-gradient(
+        rgb(0 0 0/ 1),
+        rgb(0 0 0/ 0.5) 90%,
+        rgb(0 0 0/ 0)
+        );
+    mask-image: linear-gradient(
+        rgb(0 0 0/ 1),
+        rgb(0 0 0/ 0.5)90%,
+        rgb(0 0 0/ 0)
+    
+    );
 }
+
 
 .slide_one {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: white;
-}
-
-.image-date {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
     text-align: center;
 }
 
-.image-date>h3 {
+
+.banner .slide_one.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.logobanner {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.banner .slide_one.show .logobanner {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    position: relative;
+    top: 0;
+}
+
+.image-date > h3 {
     font-size: 30px;
     font-weight: 700;
 }
 
-.image-date>p {
+.image-date > p {
     font-size: 20px;
     font-weight: 200;
 }
 
 .button {
     border: none;
-    padding: 10px 10px;
+    padding: 10px 20px;
     margin-top: 15px;
     width: 200px;
     text-align: center;
     text-decoration: none;
     background-color: #8a0301;
-    ;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -387,7 +402,6 @@ header>nav>ul>li:hover>ul {
     font-size: var(--font-xsmall);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s linear;
-
 }
 
 .button:hover {
@@ -395,9 +409,7 @@ header>nav>ul>li:hover>ul {
     transform: scale(1.1, 1.1);
 }
 
-
 /**********************MERCH**********************/
-
 
 
 .merch {
@@ -492,7 +504,7 @@ header>nav>ul>li:hover>ul {
 }
 
 
-.card h3 {
+.card h2 {
     font-family: 'VEEPS';
     font-weight: bold;
     width: 100%;
@@ -673,7 +685,7 @@ footer {
         justify-content: center;
         align-items: center;
         transition: .3s ease;
-        
+
     }
 
     #check:checked~.navbar_menu {

@@ -19,38 +19,37 @@
                     <img class="logo" src="./Imagenes/logo-nombre.png" alt="logo">
                 </picture>
                 <div class="organizar">
-                <input type="checkbox" id="check">
-                <label for="check" class="icons">
-                    <i class='bx bx-menu' id="menu-icon"></i>
-                    <i class='bx bx-x' id="close-icon"></i>
-                </label>
-                
+                    <input type="checkbox" id="check">
+                    <label for="check" class="icons">
+                        <i class='bx bx-menu' id="menu-icon"></i>
+                        <i class='bx bx-x' id="close-icon"></i>
+                    </label>
+
                     <ul class="navbar_menu">
                         <li><a class="navbar_link" href="#shop">SHOP</a></li>
                         <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
                         <li><a class="navbar_link" href="#contacto">CONTACT</a></li>
                     </ul>
 
-                    <div class="container-carrito">
-                        <i class="fa-solid fa-cart-shopping icon-cart"></i>
 
-                        <div class="count-product">
-                            <span id="contador-productos">0</span>
+
+                    <div class="container-icon">
+                        <div class="container-cart-icon">
+                            <i class="fa-solid fa-cart-shopping icon-cart"></i>
+                            
                         </div>
-                        <div class="container-cart-products hidden-cart">
-                            <div class="cart-product">
-                                <div class="info-cart-product">
-                                    <span class="cantidad-producto-carrito">1</span>
 
-                                    <p class="titulo-producto-carrito">Zapatos Nike</p>
-                                    <span class="precio-producto-carrito">$80</span>
+                        <div class="container-cart-products hidden-cart">
+                            <div class="row-product hidden">
+                                <div class="cart-product">
+
                                 </div>
-                                <i class="close-icon-cart fa-solid fa-xmark"></i>
                             </div>
-                            <div class="cart-total">
-                                <h3>Total</h3>
-                                <span class="total-pagar">$200</span>
+
+                            <div class="total-container">
+                                <p class="total-price">Total: $0.00</p>
                             </div>
+                            <!-- <p class="cart-empty">El carrito está vacío</p>-->
                         </div>
                     </div>
                 </div>
@@ -67,14 +66,13 @@
                 <img class="logobanner" src="./Imagenes/logo-final.png" alt="">
                 <p>PARA MAS INFORMACIÓN</p>
                 <h3>CONTÁCTATE CON NOSOTROS</h3>
-                <a class="button" href="#" alt="">CONTACTANOS</a>
+                <a class="button" href="#contacto">CONTACTANOS</a>
             </div>
         </div>
 
-        </div>
 
         <h3 id="shop" class="merch ">SHOP</h3>
-        <section class="card-container ">
+        <section class="card-container">
             <div class="card">
                 <a href="./Imagenes/Remeras/crown2.jpg" data-lightbox="models" data-title="Remera">
                     <!--Full screen imagen de cards-->
@@ -84,10 +82,10 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>CROWN THE EMPIRE</h3>
-                    <p>Remera Oversize <br>Crown The Empire</p>
-                    <p>$25.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <h2>CROWN THE EMPIRE</h2>
+                    <h3>Remera Oversize <br>Crown The Empire</h3>
+                    <p>$25000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
 
@@ -102,15 +100,15 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>BEARTOOTH</h3>
+                    <h2>BEARTOOTH</h2>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <p>Remera Oversize <br>BEARTOOTH</p>
+                    <h3>Remera Oversize <br>BEARTOOTH</h3>
 
-                    <p>$35.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <p>$35000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
@@ -123,10 +121,10 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>MEMPHIS MAY FIRE</h3>
-                    <p>Remera Oversize <br>Memphis May Fire</p>
-                    <p>$25.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <h2>MEMPHIS MAY FIRE</h2>
+                    <h3>Remera Oversize <br>Memphis May Fire</h3>
+                    <p>$25000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
@@ -140,14 +138,14 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>BAD OMENS</h3>
+                    <h2>BAD OMENS</h2>
                     <br>
                     <br>
                     <br>
                     <br>
-                    <p>Remera Oversize <br>Crown The Empire</p>
-                    <p>$25.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <h3>Remera Oversize <br>Crown The Empire</h3>
+                    <p>$25000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
@@ -160,10 +158,10 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>OF MICE AND MEN</h3>
-                    <p>Remera Oversize <br>Of Mice And Men</p>
-                    <p>$25.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <h2>OF MICE AND MEN</h2>
+                    <h3>Remera Oversize <br>Of Mice And Men</h3>
+                    <p>$25000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             <div class="card">
@@ -176,10 +174,10 @@
                     </div>
                 </a>
                 <div class="card-content">
-                    <h3>BRING ME THE HORIZON</h3>
-                    <p>Remera Oversize <br>Bring Me The Horizon</p>
-                    <p>$30.000</p>
-                    <button class="button-add">AÑADIR AL CARRITO</button>
+                    <h2>BRING ME THE HORIZON</h2>
+                    <h3>Remera Oversize <br>Bring Me The Horizon</h3>
+                    <p>$30000</p>
+                    <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
             </div>
             </div>
@@ -192,7 +190,7 @@
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/track/6e8mGxYiLfrLfdpNRnMKdf?utm_source=generator" width="50%"
-                height="352" frameBorder="0" allowfullscreen=""
+                height="352" frameBorder="0"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         </section>
@@ -227,10 +225,10 @@
         </section>
         <section class="footer-nav">
             <ul class="navbar_menu">
-                <li><a class="navbar_link" href="">HOME</a></li>
-                <li><a class="navbar_link" href="">SHOP</a></li>
+                <li><a class="navbar_link" href="/index.html">HOME</a></li>
+                <li><a class="navbar_link" href="#shop">SHOP</a></li>
                 <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
-                <li><a class="navbar_link" href="">LOGIN</a></li>
+                
             </ul>
         </section>
         <div class="footerBottom">
@@ -239,7 +237,7 @@
     </footer>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/1ad357c317.js" crossorigin="anonymous"></script>
-    <script src="/lightbox-plus-jquery.js"></script> <!--Full screen imagen de cards-->
+     <script src="/lightbox-plus-jquery.js"></script> Full screen imagen de cards
 </body>
 
 </html>
