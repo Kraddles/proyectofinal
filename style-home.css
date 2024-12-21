@@ -13,6 +13,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: #131514;
@@ -172,7 +177,17 @@ header>nav>ul>li:hover>ul {
     mask-image: -webkit-radial-gradient(#2e3130);
 }
 
-
+.logochico {
+    position: relative;
+    background-size: contain;
+    max-width: 50px;
+    /* Fixed width as per the design */
+    height: 100%;
+    /* Full height of the header */
+    -webkit-mask-image: linear-gradient(#2a2c2b, transparent);
+    mask-image: -webkit-radial-gradient(#2e3130);
+    display: none;
+} 
 
 
 .container {
@@ -234,6 +249,7 @@ header>nav>ul>li:hover>ul {
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
+    display: block;
 
 }
 
@@ -293,16 +309,17 @@ header>nav>ul>li:hover>ul {
     font-weight: 700;
 }
 
-.total-pagar {
-    font-size: 20px;
-    font-weight: 900;
-}
+
 
 .total-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 30px 0;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
 }
 
 .hidden-cart {
@@ -418,9 +435,11 @@ header>nav>ul>li:hover>ul {
     font-size: 50px;
     text-align: center;
     padding: 30px 0;
+    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
     background-image: linear-gradient(rgb(255, 255, 255), #131514);
     background-clip: text;
     color: transparent;
+   
 }
 
 .card-container {
@@ -551,10 +570,12 @@ header>nav>ul>li:hover>ul {
 }
 
 .text-music {
-    padding: 30px 0;
+    color: white;
     font-weight: 900;
     font-size: 50px;
     text-align: center;
+    padding: 30px 0;
+    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
     background-image: linear-gradient(rgb(255, 255, 255), #131514);
     background-clip: text;
     color: transparent;
@@ -564,6 +585,9 @@ header>nav>ul>li:hover>ul {
     padding: 30px 0 30px 0;
 }
 
+
+
+/*//////////////////////////*/
 .contact {
     display: flex;
     justify-content: center;
@@ -572,30 +596,132 @@ header>nav>ul>li:hover>ul {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
+}
+ .form {
+    background-color: var(--light-color);
+    margin: 80px auto;
+    max-width: 1000px;
+    height: auto;
+    padding: 30px;
+    border-radius: 50px;
+    box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(104, 104, 104, 0.1);
+    width: 100%;
 }
 
-.contact h3 {
-    padding: 30px 0;
+
+.title {
+    color: white;
     font-weight: 900;
     font-size: 50px;
     text-align: center;
+    padding: 30px 0;
+    filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
     background-image: linear-gradient(rgb(255, 255, 255), #131514);
     background-clip: text;
     color: transparent;
+    
+    
 }
 
-.contact p {
-    padding: 30px 0;
+
+.form_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%;
+    gap: 20px;
+}
+
+
+
+.form h3 {
+    font-size: 40px;
     font-weight: 900;
-    font-size: 30px;
-    text-align: center;
-    background-image: linear-gradient(#222222, #520301);
+    background-image: linear-gradient(rgb(255, 255, 255), #131514);
     background-clip: text;
     color: transparent;
+    padding: 30px 0;
+    
+}
+
+.contact input {
+    font-family: var(--base-font);
+    border-radius: 10px;
+    border: solid 1px #696969;
+    color: #ffffff;
+    padding: 10px;
+    outline: none;
+    background: rgba(255 255 255 / .1);
+}
+
+.contact input::placeholder {
+    font-family: var(--base-font);
+    font-weight: bold;
+    
+    font-size: 15px;
 }
 
 
 
+.button-send {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: rgba(138 3 1);
+    -webkit-mask-image: linear-gradient(#3d3d3d, transparent);
+    mask-image: -webkit-radial-gradient(#191a19);
+    grid-column: 1/3;
+    border: none;
+    transition: 0.5s;
+    grid-row: 3/5;
+}
+
+.button-send:hover {
+    background-color: white;
+    color: #191a19;
+    transition: 0.5s;
+}
+
+
+.input-box {
+    width: 100%;
+}
+
+/***********************CHUCKNORRIS************************/
+.chucknorris-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+}
+
+.chucknorris-container button {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: rgba(138 3 1);
+    -webkit-mask-image: linear-gradient(#3d3d3d, transparent);
+    mask-image: -webkit-radial-gradient(#191a19);
+    grid-column: 1/3;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.chucknorris-container button:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1, 1.1);
+    
+}
 
 
 
@@ -652,7 +778,18 @@ footer {
     color: white;
 }
 
+
+
+
 @media (max-width:1200px) {
+ .logo {
+    display: none;
+}
+.logochico {
+    display: inline-block;
+}
+
+
 
     .icons {
         display: inline-flex;
@@ -721,7 +858,29 @@ footer {
     }
 
     .banner {
-        height: 800px;
+        height: 600px;
     }
+
+    .logobanner {
+        max-width: 200px;
+        height: auto;
+    }
+    
+    .image-date > h3 {
+        font-size: 20px;  
+    }
+    
+    .image-date > p {
+        font-size: 15px;
+    }
+    
+    .button {
+        width: 100px;
+        font-size: 12px;
+       
+
+    }
+
+
 
 }

@@ -1,0 +1,2 @@
+La página en un principio es para mi banda Proyecto Cero, seccion para redes sociales y parte comercio, como no hay de momento productos utilice productos de otras bandas!
+el archivo "lightbox-plus-jQuery.js" simplemente lo coloque para que me haga un full screen de las imágenes de las cards

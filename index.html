@@ -17,6 +17,7 @@
             <nav class="nav container">
                 <picture>
                     <img class="logo" src="./Imagenes/logo-nombre.png" alt="logo">
+                    <img class="logochico" src="./Imagenes/logo-final.png" alt="logochico">
                 </picture>
                 <div class="organizar">
                     <input type="checkbox" id="check">
@@ -34,24 +35,22 @@
 
 
                     <div class="container-icon">
-                        <div class="container-cart-icon">
-                            <i class="fa-solid fa-cart-shopping icon-cart"></i>
-                            
+                        <div class="container-cart-icon icon-cart">
+                            <i class="fa fa-shopping-cart"></i>
                         </div>
+
 
                         <div class="container-cart-products hidden-cart">
-                            <div class="row-product hidden">
-                                <div class="cart-product">
-
-                                </div>
+                            <div class="cart-product-list">
+                                <!-- Productos del carrito -->
                             </div>
-
-                            <div class="total-container">
-                                <p class="total-price">Total: $0.00</p>
+                            <div class="total-price total-container">
+                                <!-- Total del carrito -->
                             </div>
-                            <!-- <p class="cart-empty">El carrito está vacío</p>-->
                         </div>
+                        <!-- <p class="cart-empty">El carrito está vacío</p>-->
                     </div>
+                </div>
                 </div>
             </nav>
         </header>
@@ -105,7 +104,7 @@
                     <br>
                     <br>
                     <br>
-                    <h3>Remera Oversize <br>BEARTOOTH</h3>
+                    <h3>Remera Oversize <br> Beartooth</h3>
 
                     <p>$35000</p>
                     <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
@@ -134,7 +133,6 @@
                     <div class="face front">
                         <img class="abajo" src="./Imagenes/Remeras/badomens2.jpg" alt="Remera">
                         <img class="arriba" src="/Imagenes/Remeras/badomens1.jpg" alt="Foto">
-                        <h3>BAD OMENS</h3>
                     </div>
                 </a>
                 <div class="card-content">
@@ -143,10 +141,11 @@
                     <br>
                     <br>
                     <br>
-                    <h3>Remera Oversize <br>Crown The Empire</h3>
-                    <p>$25000</p>
+                    <h3>Remera Oversize <br>Bad Omens</h3>
+                    <p>$35000</p>
                     <button class="button-add agregar-carrito">AÑADIR AL CARRITO</button>
                 </div>
+            </div>
             </div>
             <div class="card">
                 <a href="./Imagenes/Remeras/ofmiceandmen2.jpg" data-lightbox="models" data-title="Remera">
@@ -195,18 +194,24 @@
                 loading="lazy"></iframe>
         </section>
         <section id="contacto" class="contact">
-            <h3>CONTACTO</h3>
-            <p>CONTÁCTATE CON NOSOTROS </h3>
-            <form action="">
-                <div class="input-box"> <input type="text" required placeholder="Nombre y Apellido"></div>
-                <div class="input-box"> <input type="email" required placeholder="Correo electrónico"></div>
-                <div class="input-box"> <input type="text" required placeholder="Asunto"></div>
-                <div class="input-box"> <input type="text" required placeholder="Escribe tu mensaje"></div>
-                <button type="submit">Enviar mensaje</button>
+            <h3 class="title">CONTACTO</h3>
+            <form class="form" id="contactForm">
+                <h3>CONTÁCTATE CON NOSOTROS</h3>
+                <div class="form_container">
+                    <input type="text" id="nombres" placeholder="Nombres" required>
+                    <input type="text" id="apellido" placeholder="Apellido" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="mensaje" placeholder="Mensaje" required>
+                    <button class="button-send" type="submit">ENVIAR</button>
+                </div>
             </form>
-
+            <p id="responseMessage"></p>
         </section>
-
+        <div class="chucknorris-container">
+            <h1>Chiste de Chuck Norris</h1>
+            <p id="chiste">¡Haz clic en el botón para obtener un chiste!</p>
+            <button id="boton">Obtener Chiste</button>
+        </div>
 
 
 
@@ -228,7 +233,7 @@
                 <li><a class="navbar_link" href="/index.html">HOME</a></li>
                 <li><a class="navbar_link" href="#shop">SHOP</a></li>
                 <li><a class="navbar_link" href="#reproduce">MUSIC</a></li>
-                
+
             </ul>
         </section>
         <div class="footerBottom">
@@ -237,7 +242,7 @@
     </footer>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/1ad357c317.js" crossorigin="anonymous"></script>
-     <script src="/lightbox-plus-jquery.js"></script> Full screen imagen de cards
-</body>
+      <script src="/lightbox-plus-jquery.js"></script> Full screen imagen de cards
+
 
 </html>
