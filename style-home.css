@@ -335,7 +335,7 @@ header>nav>ul>li:hover>ul {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -566,7 +566,7 @@ header>nav>ul>li:hover>ul {
 /**********************MUSIC**********************/
 .music {
     text-align: center;
-
+    padding: 20px; 
 }
 
 .text-music {
@@ -574,6 +574,7 @@ header>nav>ul>li:hover>ul {
     font-weight: 900;
     font-size: 50px;
     text-align: center;
+    margin-bottom: 20px;
     padding: 30px 0;
     filter: drop-shadow(0 0 30px rgba(228, 3, 3, 0.8));
     background-image: linear-gradient(rgb(255, 255, 255), #131514);
@@ -581,8 +582,18 @@ header>nav>ul>li:hover>ul {
     color: transparent;
 }
 
-.music iframe {
-    padding: 30px 0 30px 0;
+
+.video-container, .spotify-container {
+    width: 100%; 
+    max-width: 800px; 
+    margin: 20px auto; 
+}
+
+.video-container iframe,
+.spotify-container iframe {
+    width: 100%; 
+    height: auto; 
+
 }
 
 
@@ -597,20 +608,21 @@ header>nav>ul>li:hover>ul {
     background-size: cover;
     background-repeat: no-repeat;
     scroll-behavior: smooth;
+    padding: 20px; 
+    text-align: center;
 }
  .form {
     background-color: var(--light-color);
-    margin: 80px auto;
-    max-width: 1000px;
+    margin: 40px auto; 
+    max-width: 90%; 
     height: auto;
     padding: 30px;
-    border-radius: 50px;
+    border-radius: 20px; 
     box-shadow: 0 5px 10px -5px rgb(0 0 0 / 30%);
     display: flex;
     flex-direction: column;
     align-items: center;
     background: rgba(104, 104, 104, 0.1);
-    width: 100%;
 }
 
 
@@ -632,7 +644,7 @@ header>nav>ul>li:hover>ul {
 .form_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: auto; 
     width: 100%;
     gap: 20px;
 }
@@ -877,10 +889,53 @@ footer {
     .button {
         width: 100px;
         font-size: 12px;
-       
+    }
 
+    .youtube {
+        height: 200px; 
+    }
+
+    .spotify {
+        height: 150px; 
     }
 
 
+    .form_container {
+        grid-template-columns: 1fr; 
+    }
+
+    .title {
+        font-size: 2rem; 
+    }
+
+    .form h3 {
+        font-size: 1.5rem; 
+        padding: 20px 0; 
+    }
+
+    .button-send {
+        width: 100%; 
+        font-size: 1.2rem; 
+        padding: 15px; 
+    }
+
+    .contact input {
+        
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    .input-box {
+        width: 100%; 
+    }
+
 
 }
+
+
+
+
+
+
+
+
